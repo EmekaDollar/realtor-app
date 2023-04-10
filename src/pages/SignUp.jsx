@@ -42,13 +42,17 @@ function SignUp() {
         displayName: name,
       });
       const user = userCredential.user;
+      // getting all the everything inside the form data
       const formDataCopy = {...formData};
+      // deleting the password from the form data
       delete formDataCopy.password;
+      // add the time the user registers
       formDataCopy.timestamp = serverTimestamp();
 
+      // saving the user data amd the user id to firebase database
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       // toast.success("Sign up was successful")
-      // navigate("/");
+      navigate("/sign-in");
     } catch (error) {
       toast.error("Something went wrong with the registration")
     }

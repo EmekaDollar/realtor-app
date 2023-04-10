@@ -73,7 +73,7 @@ function SignIn() {
                   to='/forgot-password'
                   className='text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out'
                 >
-                  Forgot Password?
+                  Forgot Password? 
                 </Link>
               </p>
             </div>
@@ -95,3 +95,5 @@ function SignIn() {
 }
 
 export default SignIn;
+
+

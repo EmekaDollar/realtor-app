@@ -19,7 +19,7 @@ function ForgotPassword() {
       await sendPasswordResetEmail(auth, email);
       toast.success("email was sent");
     } catch (error) {
-      toast.error("Could not send reset password");
+      toast.error("email doesn't exist");
     }
   }
   return (
